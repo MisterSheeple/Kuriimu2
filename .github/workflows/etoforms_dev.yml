@@ -102,11 +102,11 @@ jobs:
       run: |
         dotnet publish ./src/Kuriimu2.EtoForms/Kuriimu2.EtoForms.Wpf/Kuriimu2.EtoForms.Wpf.csproj --output ./dist/final/Wpf --configuration Release --framework netcoreapp8 --runtime win-x64 /p:PublishSingleFile=true
         dotnet publish ./src/Kuriimu2.EtoForms/Kuriimu2.EtoForms.Gtk/Kuriimu2.EtoForms.Gtk.csproj --output ./dist/final/Gtk --configuration Release --framework netcoreapp8 --runtime linux-x64 /p:PublishSingleFile=true
-        dotnet publish ./src/Kuriimu2.EtoForms/Kuriimu2.EtoForms.Mac/Kuriimu2.EtoForms.Mac.csproj --configuration Release --framework netcoreapp31 --runtime osx-x64 /p:PublishSingleFile=true
+        dotnet publish ./src/Kuriimu2.EtoForms/Kuriimu2.EtoForms.Mac/Kuriimu2.EtoForms.Mac.csproj --configuration Release --framework netcoreapp8 --runtime osx-x64 /p:PublishSingleFile=true
         mv ./dist/final/Wpf/Kuriimu2.EtoForms.Wpf.exe ./dist/final/Wpf/Kuriimu2.exe
         mv ./dist/final/Gtk/Kuriimu2.EtoForms.Gtk ./dist/final/Gtk/Kuriimu2
         mkdir ./dist/final/Mac
-        mv ./dist/Release/netcoreapp31/Kuriimu2.app ./dist/final/Mac/Kuriimu2.app
+        mv ./dist/Release/netcoreapp8/Kuriimu2.app ./dist/final/Mac/Kuriimu2.app
         rm ./dist/final/Wpf/*.pdb
         rm ./dist/final/Gtk/*.pdb
         
